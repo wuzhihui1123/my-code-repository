@@ -196,7 +196,7 @@ if __name__ == "__main__":
     # 5、对备份状态进行邮件通知
     subject = u'NSRC网站数据备份'
     content = u'''
-    <h4>服务器[211.71.211.123]上网站数据已经备份到阿里云对象存储（OSS）服务器上面</h4>
+    <h4>服务器[<ip>]上网站数据已经备份到阿里云对象存储（OSS）服务器上面</h4>
     <p><b>备份日期</b>：     {backup_time}</p>
     <p><b>备份文件名</b>：   {bak_file}</p>
     '''.format(backup_time=time.strftime('%Y-%m-%d %H:%M'), bak_file=os.path.basename(nsrc_bak_file))
